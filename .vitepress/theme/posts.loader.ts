@@ -7,7 +7,7 @@ import getLocation from "./locations";
 
 // Title Workaround
 function extractTitle(text: string) {
-  const titlePattern = /---\n\n# (?<title>.*)\n/;
+  const titlePattern = /---\r?\n\r?\n# (?<title>.*)\r?\n/;
   const match = text.match(titlePattern);
   return match?.groups?.title || "Untitled";
 }
